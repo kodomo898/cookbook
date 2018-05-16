@@ -27,10 +27,7 @@ include_recipe "presetup::timezone"
 include_recipe "presetup::sudo"
 
 %w{
-        mlocate
-        telnet
-        nss-pam-ldapd
-        pam_ldap
+        
 }.each do |package_name|
   package "#{package_name}" do
     action :install
